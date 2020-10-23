@@ -1,0 +1,17 @@
+# vim style
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+unbind-key ^D 
+unbind-key ^U 
+bind-key j down
+bind-key k up
+bind-key J next
+bind-key K prev
+bind-key ^D pagedown
+bind-key ^U pageup
+goto-next-feed no
+browser firefox
+max-items 100
+save-path "~/.newsboat/save"
