@@ -113,7 +113,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias proxy='proxychains4 -q'
 alias ls='ls --color=auto'
-
 # rm confirm
 alias rm="rm -i"
 # pinfo
@@ -121,6 +120,8 @@ alias info="pinfo"
 # mutt
 alias mutt_yahoo='proxy mutt -e "source ~/.mutt/yahoo/config"'
 alias mutt_outlook='proxy mutt -e "source ~/.mutt/outlook/config"'
+# vim
+alias v="vim"
 
 # global npm modules
 export NODE_PATH=$(npm root --quiet -g)
