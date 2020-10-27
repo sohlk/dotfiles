@@ -27,7 +27,7 @@ exec --no-startup-id parcellite &
 exec --no-startup-id x-on-resize -c ~/Config/autoxrandr.sh &
 
 # auto start compton
-exec --no-startup-id "compton -b --config ~/.config/compton/compton.conf"
+exec --no-startup-id picom -b
 
 # auto start dunst
 exec --no-startup-id dunst
