@@ -12,19 +12,19 @@
 set $mod Mod4
 
 # auto start fcitx
-exec --no-startup-id fcitx &
+exec --no-startup-id fcitx
 
 # auto start nm-applet
-exec --no-startup-id nm-applet &
+exec --no-startup-id nm-applet
 
 # auto start blueman-applet
-exec --no-startup-id blueman-applet &
+exec --no-startup-id blueman-applet
 
 # auto start clipboard manager
-exec --no-startup-id parcellite &
+exec --no-startup-id parcellite
 
 # auto set monitor
-exec --no-startup-id x-on-resize -c ~/Config/autoxrandr.sh &
+exec --no-startup-id x-on-resize -c ~/Config/autoxrandr.sh
 
 # auto start compton
 exec --no-startup-id picom -b
@@ -72,8 +72,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+q kill
 
-# start rofi 
-bindsym $mod+d exec rofi -show combi
+# start rofi
+bindsym $mod+d exec rofi -show drun
 
 # change focus
 bindsym $mod+h focus left
@@ -82,10 +82,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+#bindsym $mod+Left focus left
+#bindsym $mod+Down focus down
+#bindsym $mod+Up focus up
+#bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -94,10 +94,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+#bindsym $mod+Shift+Left move left
+#bindsym $mod+Shift+Down move down
+#bindsym $mod+Shift+Up move up
+#bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+c split h
