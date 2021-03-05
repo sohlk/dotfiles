@@ -78,8 +78,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
     git
     z
-    zsh-syntax-highlighting
     vi-mode
+    zsh-syntax-highlighting
     zsh-autosuggestions
 )
 
@@ -112,7 +112,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias proxy='proxychains4 -q'
-alias ls='ls --color=auto'
 # rm confirm
 alias rm="rm -i"
 # pinfo
@@ -122,11 +121,11 @@ alias mutt_yahoo='proxy mutt -e "source ~/.mutt/yahoo/config"'
 alias mutt_outlook='proxy mutt -e "source ~/.mutt/outlook/config"'
 # vim
 alias v="vim"
+# auracle
+alias aur="proxy auracle"
+# aurpublish
+alias aurpb="proxy aurpublish"
 
-# global npm modules
-export NODE_PATH=$(npm root --quiet -g)
-# pip execute
-export PATH="$HOME/.local/bin:$PATH"
 # qt5ct
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
