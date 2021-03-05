@@ -3,13 +3,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+Plug 'ycm-core/YouCompleteMe'
 """"""""""""""""""""""""""""""""""""""""
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""
 set nocompatible
 set number
 set wrap
-set linebreak
 set showbreak=↪\ 
 set showmatch
 set hlsearch
@@ -38,6 +38,12 @@ let mapleader = ' '
 map <leader>p :Leaderf function<CR>
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
+"youcompleteme
+let g:ycm_confirm_extra_conf = 0
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+set completeopt-=preview
+nmap <leader>l <plug>(YCMHover)
+let g:ycm_auto_hover = ''
 """"""""""""""""""""""""""""""""""""""""
 "indent for different filetype
 "default style
@@ -47,3 +53,4 @@ set softtabstop=2
 
 autocmd FileType c set expandtab softtabstop=4 shiftwidth=4
 autocmd FileType make set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8
+autocmd FileType sh set expandtab tabstop=2 softtabstop=2 shiftwidth=2
