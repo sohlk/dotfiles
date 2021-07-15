@@ -111,23 +111,28 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias proxy='proxychains4 -q'
+# alias after proxy
+alias proxy="proxychains -q "
 # rm confirm
 alias rm="rm -i"
 # pinfo
 alias info="pinfo"
 # mutt
-alias mutt_yahoo='proxy mutt -e "source ~/.mutt/yahoo/config"'
-alias mutt_outlook='proxy mutt -e "source ~/.mutt/outlook/config"'
+alias mutt_yahoo="proxy mutt -e 'source ~/.mutt/yahoo/config'"
+alias mutt_outlook="proxy mutt -e 'source ~/.mutt/outlook/config'"
 # vim
 alias v="vim"
 # auracle
 alias aur="proxy auracle"
 # aurpublish
 alias aurpb="proxy aurpublish"
+# alias after sudo
+alias sudo="sudo "
 
 # qt5ct
 export QT_QPA_PLATFORMTHEME="qt5ct"
+# node path
+export NODE_PATH="/usr/lib/node_modules"
 
 # zsh/plugin config
 bindkey ',' autosuggest-accept

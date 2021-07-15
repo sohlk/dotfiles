@@ -15,3 +15,8 @@ goto-next-feed no
 browser firefox
 max-items 100
 save-path "~/.newsboat/save"
+
+#proxy
+proxy-type socks5
+proxy 127.0.0.1:1080
+use-proxy yes
