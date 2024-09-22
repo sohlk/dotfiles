@@ -1,7 +1,12 @@
 patch:
-  "menu/page_size": 5 
+  "menu/page_size": 5
+  "switches/@0/reset": 1
+  "switcher/hotkeys":
+    - "Control+grave"
+  style/horizontal: false
   schema_list:
-    - schema: luna_pinyin
+    - schema: terra_pinyin
+    - schema: japanese
   ascii_composer/good_old_caps_lock: true
   ascii_composer/switch_key:
     Caps_Lock: noop

@@ -1,0 +1,67 @@
+### not real config file
+global {
+    ##### Software options.
+    tproxy_port_protect: true
+    so_mark_from_dae: 0
+    log_level: info
+    disable_waiting_network: false
+
+    ##### Interface and kernel options.
+    wan_interface: auto
+    auto_config_kernel_parameter: true
+
+    ##### Node connectivity check.
+    tcp_check_url: 'http://cp.cloudflare.com,1.1.1.1'
+    tcp_check_http_method: HEAD
+    udp_check_dns: 'dns.google.com:53,8.8.8.8'
+    check_interval: 30s
+    check_tolerance: 50ms
+    dial_mode: domain
+    allow_insecure: false
+    sniffing_timeout: 100ms
+    tls_implementation: tls
+}
+
+node {
+}
+
+dns {
+    ipversion_prefer: 4
+
+    upstream {
+        tcdns: 'udp://119.29.29.29:53'
+        cfdns: 'tcp+udp://1.1.1.1:53'
+    }
+
+    routing {
+        request {
+            qname(geosite:cn) -> tcdns
+            fallback: cfdns
+        }
+    }
+}
+
+# Node group (outbound).
+group {
+    proxy {
+        policy: fixed(0)
+    }
+}
+
+routing {
+    # Disable h3 because it usually consumes too much cpu/mem resources.
+    l4proto(udp) && dport(443) -> block
+
+    pname(NetworkManager) -> direct
+    dip(224.0.0.0/3, 'ff00::/8') -> direct
+    dip(geoip:private) -> direct
+
+    dip(geoip:cn) -> direct
+    domain(geosite:cn) -> direct
+    dip(119.29.29.29) -> direct
+    pname(Proton) -> direct
+    pname(tor) -> proxy
+    domain(keyword: myanonamouse) -> direct
+    domain(geosite:bilibili) -> direct
+    fallback: proxy
+}

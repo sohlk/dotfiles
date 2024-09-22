@@ -1,0 +1,18 @@
+# terra_pinyin.custom.yaml
+
+patch:
+  switches:
+    - name: ascii_mode
+      reset: 0
+    - name: full_shape
+      reset: 0
+    - name: simplification
+      reset: 1
+    - name: ascii_punct
+      reset: 1
+  key_binder:
+    bindings:
+      - {accept: "Control+k", send: Up, when: composing}
+      - {accept: "Control+j", send: Down, when: composing}
+      - {accept: "Control+h", send: Page_Up, when: composing}
+      - {accept: "Control+l", send: Page_Down, when: composing}

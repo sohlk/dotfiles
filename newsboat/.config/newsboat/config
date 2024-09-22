@@ -3,8 +3,8 @@ unbind-key j
 unbind-key k
 unbind-key J
 unbind-key K
-unbind-key ^D 
-unbind-key ^U 
+unbind-key ^D
+unbind-key ^U
 bind-key j down
 bind-key k up
 bind-key J next
@@ -19,4 +19,3 @@ save-path "~/.newsboat/save"
 #proxy
 proxy-type socks5
 proxy 127.0.0.1:1080
-use-proxy yes

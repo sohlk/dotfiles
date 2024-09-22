@@ -81,6 +81,7 @@ plugins=(
     vi-mode
     zsh-syntax-highlighting
     zsh-autosuggestions
+    taskwarrior
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -111,23 +112,30 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias after proxy
-alias proxy="proxychains -q "
+# proxychains
+#alias proxy="proxychains -q "
+# http_proxy
+#alias httpp="http_proxy=http://127.0.0.1:8119 https_proxy=http://127.0.0.1:8119"
 # rm confirm
 alias rm="rm -i"
 # pinfo
 alias info="pinfo"
 # mutt
-alias mutt_yahoo="proxy mutt -e 'source ~/.mutt/yahoo/config'"
-alias mutt_outlook="proxy mutt -e 'source ~/.mutt/outlook/config'"
+alias mutt_yahoo="mutt -e 'source ~/.mutt/yahoo/config'"
+alias mutt_outlook="mutt -e 'source ~/.mutt/outlook/config'"
 # vim
 alias v="vim"
+alias vimupdate="vim +PlugUpdate +qall"
 # auracle
-alias aur="proxy auracle"
+alias aur="auracle"
 # aurpublish
-alias aurpb="proxy aurpublish"
+alias aurpb="aurpublish"
+# aurvote
+alias vote="aurvote"
 # alias after sudo
 alias sudo="sudo "
+# ssh agent setup
+alias startx="ssh-agent startx"
 
 # qt5ct
 export QT_QPA_PLATFORMTHEME="qt5ct"
