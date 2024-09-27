@@ -16,3 +16,4 @@ patch:
       - {accept: "Control+j", send: Down, when: composing}
       - {accept: "Control+h", send: Page_Up, when: composing}
       - {accept: "Control+l", send: Page_Down, when: composing}
+
