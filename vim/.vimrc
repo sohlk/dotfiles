@@ -62,3 +62,4 @@ set softtabstop=2
 autocmd FileType c set expandtab softtabstop=4 shiftwidth=4
 autocmd FileType make set noexpandtab tabstop=8 softtabstop=8 shiftwidth=8
 autocmd FileType sh set noexpandtab tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType lua set expandtab tabstop=4 softtabstop=4 shiftwidth=4

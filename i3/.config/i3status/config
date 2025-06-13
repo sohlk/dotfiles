@@ -14,7 +14,6 @@ general {
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "volume master"
-order += "cpu_usage"
 order += "tztime local"
 
 wireless _first_ {
@@ -34,10 +33,6 @@ tztime local {
 
 disk "/" {
         format = "%avail"
-}
-
-cpu_usage {
-        format = "CPU: %usage"
 }
 
 volume master {

@@ -136,6 +136,10 @@ alias vote="aurvote"
 alias sudo="sudo "
 # ssh agent setup
 alias startx="ssh-agent startx"
+# transmission
+alias tr="transmission-remote"
+# proton
+alias protonrun="STEAM_COMPAT_CLIENT_INSTALL_PATH=~/.local/share/Steam STEAM_COMPAT_DATA_PATH=~/.steam/steam/steamapps/compatdata/362890 ~/.steam/steam/steamapps/common/Proton\ -\ Experimental/proton run"
 
 # qt5ct
 export QT_QPA_PLATFORMTHEME="qt5ct"
